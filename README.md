@@ -12,6 +12,8 @@ Cada problema se organiza en su propia carpeta siguiendo el formato `ID.Nombre_d
     Kaprekar.java
   101.Cuadrados diabolicos y esotericos/
     CuadradosMagicos.java
+  102.Encriptacion de mensajes/
+    Encriptacion.java
 101-200/
   ...
 ```
@@ -20,7 +22,7 @@ Cada problema se organiza en su propia carpeta siguiendo el formato `ID.Nombre_d
 
 | Volumen | Rango | Resueltos |
 |---------|-------|-----------|
-| 1 | 100-199 | 2/100 |
+| 1 | 100-199 | 3/100 |
 
 ## Problemas completados
 
@@ -28,6 +30,7 @@ Cada problema se organiza en su propia carpeta siguiendo el formato `ID.Nombre_d
 |---|--------|---------|
 | 100 | Constante de Kaprekar | `Kaprekar.java` |
 | 101 | Cuadrados diabólicos y esotéricos | `CuadradosMagicos.java` |
+| 102 | Encriptación de mensajes | `Encriptacion.java` |
 
 ## Lenguaje
 
