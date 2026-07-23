@@ -4,16 +4,13 @@ Resolución diaria de problemas de [¡Acepta el reto!](https://aceptaelreto.com)
 
 ## Estructura
 
-Cada problema se organiza en su propia carpeta siguiendo el formato `ID.Nombre_del_problema` dentro del volumen que le corresponde:
+Cada problema se organiza en su propia carpeta dentro del volumen que le corresponde:
 
 ```
 001-100/
   100.Constante de Kaprekar/
-    Kaprekar.java
   101.Cuadrados diabolicos y esotericos/
-    CuadradosMagicos.java
   102.Encriptacion de mensajes/
-    Encriptacion.java
 101-200/
   ...
 ```
