@@ -1,0 +1,27 @@
+name: Publicar problema sabado
+
+on:
+  schedule:
+    - cron: '23 14 * * 6'  # Sabado a las 14:23 (hora aleatoria)
+  workflow_dispatch:        # Para poder lanzarlo manualmente
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Configurar git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Cherry-pick problema #104
+        run: git cherry-pick 6cc0d5b
+
+      - name: Push
+        run: git push origin main
