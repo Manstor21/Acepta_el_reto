@@ -18,7 +18,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 
 | Volumen | Rango | Resueltos |
 |---------|-------|-----------|
-| 1 | 100-199 | 3/100 |
+| 1 | 100-199 | 4/100 |
 
 ## Problemas completados
 
@@ -27,6 +27,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 100 | Constante de Kaprekar | `Kaprekar.java` |
 | 101 | Cuadrados diabólicos y esotéricos | `CuadradosMagicos.java` |
 | 102 | Encriptación de mensajes | `Encriptacion.java` |
+| 103 | Problemas de herencia | `Herencia.java` |
 
 ## Lenguaje
 
