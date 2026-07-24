@@ -8,9 +8,8 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 
 ```
 001-100/
-  100.Constante de Kaprekar/
-  101.Cuadrados diabolicos y esotericos/
-  102.Encriptacion de mensajes/
+  100.Nombre del problema/
+  101.Nombre del problema/
 101-200/
   ...
 ```
