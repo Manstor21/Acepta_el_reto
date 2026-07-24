@@ -18,7 +18,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 
 | Volumen | Rango | Resueltos |
 |---------|-------|-----------|
-| 1 | 100-199 | 4/100 |
+| 1 | 100-199 | 5/100 |
 
 ## Problemas completados
 
@@ -28,6 +28,8 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 101 | Cuadrados diabólicos y esotéricos | `CuadradosMagicos.java` |
 | 102 | Encriptación de mensajes | `Encriptacion.java` |
 | 103 | Problemas de herencia | `Herencia.java` |
+| 104 | Móviles | `Moviles.java` |
+| 105 | Ventas | `Ventas.java` |
 
 ## Lenguaje
 
