@@ -30,6 +30,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 103 | Problemas de herencia | `Herencia.java` |
 | 104 | Móviles | `Moviles.java` |
 | 105 | Ventas | `Ventas.java` |
+| 106 | Códigos de barras | `CodigosBarras.java` |
 
 ## Lenguaje
 
