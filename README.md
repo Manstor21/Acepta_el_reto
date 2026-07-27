@@ -18,7 +18,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 
 | Volumen | Rango | Resueltos |
 |---------|-------|-----------|
-| 1 | 100-199 | 5/100 |
+| 1 | 100-199 | 7/100 |
 
 ## Problemas completados
 
