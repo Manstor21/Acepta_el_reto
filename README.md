@@ -18,7 +18,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 
 | Volumen | Rango | Resueltos |
 |---------|-------|-----------|
-| 1 | 100-199 | 8/100 |
+| 1 | 100-199 | 9/100 |
 
 ## Problemas completados
 
@@ -32,6 +32,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 105 | Ventas | `Ventas.java` |
 | 106 | Códigos de barras | `CodigosBarras.java` |
 | 107 | Aproximación de Gauss | `Gauss.java` |
+| 108 | De nuevo en el bar de Javier | `BarJavier.java` |
 
 ## Lenguaje
 
