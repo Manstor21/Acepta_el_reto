@@ -1,9 +1,9 @@
-name: Publicar problema sabado
+name: Publicar #104 (sabado)
 
 on:
   schedule:
-    - cron: '23 14 * * 6'  # Sabado a las 14:23 (hora aleatoria)
-  workflow_dispatch:        # Para poder lanzarlo manualmente
+    - cron: '23 14 * * 6'
+  workflow_dispatch:
 
 jobs:
   publicar:
@@ -13,15 +13,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: pendientes
+          path: pendientes
 
-      - name: Configurar git
-        run: |
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+
+      - run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Cherry-pick problema #104
-        run: git cherry-pick 6cc0d5b
-
-      - name: Push
-        run: git push origin main
+          mkdir -p main/001-100/104.Moviles
+          cp pendientes/001-100/104.Moviles/Moviles.java main/001-100/104.Moviles/
+          cd main
+          git add 001-100/104.Moviles/Moviles.java
+          git commit -m "#104 - Moviles"
+          git push origin main
