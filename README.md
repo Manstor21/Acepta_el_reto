@@ -18,7 +18,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 
 | Volumen | Rango | Resueltos |
 |---------|-------|-----------|
-| 1 | 100-199 | 13/100 |
+| 1 | 100-199 | 14/100 |
 
 ## Problemas completados
 
@@ -37,6 +37,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 110 | Estrofas | `Estrofas.java` |
 | 111 | Aprobar química | `Quimica.java` |
 | 112 | Radares de tramo | `Radares.java` |
+| 113 | Semáforos sin parar | `Semaforos.java` |
 
 ## Lenguaje
 
