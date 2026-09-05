@@ -1,0 +1,32 @@
+name: Publicar #117 (miercoles)
+
+on:
+  schedule:
+    - cron: '12 9 * * 3'
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: pendientes
+          path: pendientes
+
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p "main/001-100/117.La fiesta aburrida"
+          cp "pendientes/001-100/117.La fiesta aburrida/FiestaAburrida.java" "main/001-100/117.La fiesta aburrida/"
+          cd main
+          git add "001-100/117.La fiesta aburrida/FiestaAburrida.java"
+          git commit -m "#117 - La fiesta aburrida"
+          git push origin main

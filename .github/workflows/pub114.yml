@@ -1,0 +1,32 @@
+name: Publicar #114 (domingo)
+
+on:
+  schedule:
+    - cron: '12 9 * * 0'
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: pendientes
+          path: pendientes
+
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p "main/001-100/114.Ultimo digito del factorial"
+          cp "pendientes/001-100/114.Ultimo digito del factorial/UltimoDigito.java" "main/001-100/114.Ultimo digito del factorial/"
+          cd main
+          git add "001-100/114.Ultimo digito del factorial/UltimoDigito.java"
+          git commit -m "#114 - Ultimo digito del factorial"
+          git push origin main

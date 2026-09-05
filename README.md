@@ -18,7 +18,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 
 | Volumen | Rango | Resueltos |
 |---------|-------|-----------|
-| 1 | 100-199 | 14/100 |
+| 1 | 100-199 | 24/100 |
 
 ## Problemas completados
 
@@ -38,6 +38,16 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 111 | Aprobar química | `Quimica.java` |
 | 112 | Radares de tramo | `Radares.java` |
 | 113 | Semáforos sin parar | `Semaforos.java` |
+| 114 | Último dígito del factorial | `UltimoDigito.java` |
+| 115 | Número de Kaprekar | `NumeroKaprekar.java` |
+| 116 | ¡Hola mundo! | `HolaMundo.java` |
+| 117 | La fiesta aburrida | `FiestaAburrida.java` |
+| 118 | Apuesta con recetas | `ApuestaRecetas.java` |
+| 119 | Escudos del ejército romano | `Escudos.java` |
+| 120 | Constante mágica | `ConstanteMagica.java` |
+| 121 | Chicles de regalo | `Chicles.java` |
+| 122 | Avituallamiento en las etapas ciclistas | `Avituallamiento.java` |
+| 123 | Conjugar verbos | `ConjugarVerbos.java` |
 
 ## Lenguaje
 
