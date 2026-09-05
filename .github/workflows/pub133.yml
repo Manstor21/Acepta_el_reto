@@ -1,0 +1,32 @@
+name: Publicar #133 (viernes)
+
+on:
+  schedule:
+    - cron: '12 9 * * 5'
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: pendientes
+          path: pendientes
+
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p "main/001-100/133.Prueba del nueve en base N"
+          cp "pendientes/001-100/133.Prueba del nueve en base N/PruebaNueveBaseN.java" "main/001-100/133.Prueba del nueve en base N/"
+          cd main
+          git add "001-100/133.Prueba del nueve en base N/PruebaNueveBaseN.java"
+          git commit -m "#133 - Prueba del nueve en base N"
+          git push origin main

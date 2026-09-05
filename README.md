@@ -18,7 +18,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 
 | Volumen | Rango | Resueltos |
 |---------|-------|-----------|
-| 1 | 100-199 | 24/100 |
+| 1 | 100-199 | 34/100 |
 
 ## Problemas completados
 
@@ -48,6 +48,16 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 121 | Chicles de regalo | `Chicles.java` |
 | 122 | Avituallamiento en las etapas ciclistas | `Avituallamiento.java` |
 | 123 | Conjugar verbos | `ConjugarVerbos.java` |
+| 124 | ¿Cuántas me llevo? | `CuantasMeLlevo.java` |
+| 125 | Números vampiro | `NumerosVampiro.java` |
+| 126 | Divisores del factorial | `DivisoresFactorial.java` |
+| 127 | Una, dola, tela, catola... | `Cantinela.java` |
+| 128 | Florencia | `Florencia.java` |
+| 129 | Marcadores de 7 segmentos | `Marcadores7Segmentos.java` |
+| 130 | Mejor... imposible | `MejorImposible.java` |
+| 131 | Llenando piscinas | `LlenandoPiscinas.java` |
+| 132 | Las cartas del abuelo | `CartasAbuelo.java` |
+| 133 | Prueba del nueve en base N | `PruebaNueveBaseN.java` |
 
 ## Lenguaje
 

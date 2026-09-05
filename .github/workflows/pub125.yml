@@ -1,0 +1,32 @@
+name: Publicar #125 (jueves)
+
+on:
+  schedule:
+    - cron: '12 9 * * 4'
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: pendientes
+          path: pendientes
+
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p "main/001-100/125.Numeros vampiro"
+          cp "pendientes/001-100/125.Numeros vampiro/NumerosVampiro.java" "main/001-100/125.Numeros vampiro/"
+          cd main
+          git add "001-100/125.Numeros vampiro/NumerosVampiro.java"
+          git commit -m "#125 - Numeros vampiro"
+          git push origin main

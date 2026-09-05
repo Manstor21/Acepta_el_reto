@@ -1,0 +1,32 @@
+name: Publicar #124 (miercoles)
+
+on:
+  schedule:
+    - cron: '12 9 * * 3'
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: pendientes
+          path: pendientes
+
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p "main/001-100/124.Cuantas me llevo"
+          cp "pendientes/001-100/124.Cuantas me llevo/CuantasMeLlevo.java" "main/001-100/124.Cuantas me llevo/"
+          cd main
+          git add "001-100/124.Cuantas me llevo/CuantasMeLlevo.java"
+          git commit -m "#124 - Cuantas me llevo"
+          git push origin main

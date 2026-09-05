@@ -1,0 +1,32 @@
+name: Publicar #130 (martes)
+
+on:
+  schedule:
+    - cron: '12 9 * * 2'
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: pendientes
+          path: pendientes
+
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p "main/001-100/130.Mejor imposible"
+          cp "pendientes/001-100/130.Mejor imposible/MejorImposible.java" "main/001-100/130.Mejor imposible/"
+          cd main
+          git add "001-100/130.Mejor imposible/MejorImposible.java"
+          git commit -m "#130 - Mejor imposible"
+          git push origin main
