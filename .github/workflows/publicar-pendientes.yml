@@ -34,8 +34,7 @@ jobs:
             if [ ! -d "001-100/$nombre" ]; then
               mkdir -p "001-100/$nombre"
               cp "$carpeta"*.java "001-100/$nombre/"
-              archivo="$(ls "$carpeta"*.java | xargs -n1 basename)"
-              git add "001-100/$nombre/$archivo"
+              git add "001-100/$nombre"/
               git commit -m "#${nombre%%.*} - ${nombre#*.}"
               echo "Publicado: $nombre"
               publicado=true
