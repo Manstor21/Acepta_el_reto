@@ -1,0 +1,50 @@
+name: Publicar pendientes
+
+on:
+  schedule:
+    - cron: '12 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: pendientes
+          path: pendientes
+
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          path: main
+
+      - name: Mover problemas pendientes a main
+        run: |
+          cd main
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          publicado=false
+          for carpeta in ../pendientes/001-100/*/; do
+            nombre="$(basename "$carpeta")"
+            if [ ! -d "001-100/$nombre" ]; then
+              mkdir -p "001-100/$nombre"
+              cp "$carpeta"*.java "001-100/$nombre/"
+              archivo="$(ls "$carpeta"*.java | xargs -n1 basename)"
+              git add "001-100/$nombre/$archivo"
+              git commit -m "#${nombre%%.*} - ${nombre#*.}"
+              echo "Publicado: $nombre"
+              publicado=true
+            fi
+          done
+
+          if [ "$publicado" = "true" ]; then
+            git pull --rebase origin main
+            git push origin main
+          else
+            echo "No hay problemas pendientes."
+          fi
