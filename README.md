@@ -76,6 +76,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 143 | Tortitas | [`Tortitas.java`](001-100/143.Tortitas/Tortitas.java) |
 | 144 | Teclado estropeado | [`TecladoEstropeado.java`](001-100/144.Teclado%20estropeado/TecladoEstropeado.java) |
 | 145 | El tren del amor | [`TrenDelAmor.java`](001-100/145.El%20tren%20del%20amor/TrenDelAmor.java) |
+| 146 | Numeros afortunados | [`NumerosAfortunados.java`](001-100/146.Numeros%20afortunados/NumerosAfortunados.java) |
 
 </details>
 
