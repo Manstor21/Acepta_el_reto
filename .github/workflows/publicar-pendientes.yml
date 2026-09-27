@@ -43,7 +43,9 @@ jobs:
 
               # Anadir fila al README (nombre sin acentos, derivado de la carpeta)
               # Insertar la fila despues de la ultima fila de la tabla (linea "| NNN |")
-              fila="| $num | $titulo | \`$archivo\` |"
+              # Enlace al archivo: ruta relativa con espacios como %20
+              ruta="001-100/${nombre// /%20}/$archivo"
+              fila="| $num | $titulo | [\`$archivo\`]($ruta) |"
               ultima=$(grep -nE '^\| [0-9]{3} ' README.md | tail -1 | cut -d: -f1)
               sed -i "${ultima}a $fila" README.md
               git add README.md
