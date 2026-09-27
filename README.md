@@ -73,6 +73,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 140 | Suma de digitos | [`SumaDigitos.java`](001-100/140.Suma%20de%20digitos/SumaDigitos.java) |
 | 141 | Parentesis balanceados | [`ParentesisBalanceados.java`](001-100/141.Parentesis%20balanceados/ParentesisBalanceados.java) |
 | 142 | Quien empieza | [`QuienEmpieza.java`](001-100/142.Quien%20empieza/QuienEmpieza.java) |
+| 143 | Tortitas | [`Tortitas.java`](001-100/143.Tortitas/Tortitas.java) |
 
 </details>
 
