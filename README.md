@@ -22,6 +22,9 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 
 ## Problemas completados
 
+<details>
+<summary>Volumen 1 — problemas 100-199 (36/100)</summary>
+
 | # | Nombre | Archivo |
 |---|--------|---------|
 | 100 | Constante de Kaprekar | `Kaprekar.java` |
@@ -60,6 +63,8 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 133 | Prueba del nueve en base N | `PruebaNueveBaseN.java` |
 | 134 | Escalera de color | `EscaleraColor.java` |
 | 135 | Viaje en el tiempo | `ViajeTiempo.java` |
+
+</details>
 
 ## Lenguaje
 

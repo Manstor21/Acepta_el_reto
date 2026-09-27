@@ -58,6 +58,8 @@ jobs:
             # Actualizar contador de resueltos en la tabla de Progreso
             resueltos=$(grep -cE '^\| [0-9]{3,} \|' README.md | tr -d ' ')
             sed -i -E "s/^\| 1 \| 100-199 \| [0-9]+\/100 \|$/| 1 | 100-199 | ${resueltos}\/100 |/" README.md
+            # Actualizar el contador del resumen del bloque plegable
+            sed -i -E "s/\(([0-9]+\/100)\)/(${resueltos}\/100)/" README.md
             git add README.md
             git commit -m "Actualizar progreso en README" || true
 
