@@ -71,6 +71,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 138 | Ceros del factorial | [`CerosFactorial.java`](001-100/138.Ceros%20del%20factorial/CerosFactorial.java) |
 | 139 | Numeros cubifinitos | [`NumerosCubifinitos.java`](001-100/139.Numeros%20cubifinitos/NumerosCubifinitos.java) |
 | 140 | Suma de digitos | [`SumaDigitos.java`](001-100/140.Suma%20de%20digitos/SumaDigitos.java) |
+| 141 | Parentesis balanceados | [`ParentesisBalanceados.java`](001-100/141.Parentesis%20balanceados/ParentesisBalanceados.java) |
 
 </details>
 
