@@ -69,6 +69,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 136 | Encadenando trolls | [`EncadenandoTrolls.java`](001-100/136.Encadenando%20trolls/EncadenandoTrolls.java) |
 | 137 | Hundir la flota | [`HundirLaFlota.java`](001-100/137.Hundir%20la%20flota/HundirLaFlota.java) |
 | 138 | Ceros del factorial | [`CerosFactorial.java`](001-100/138.Ceros%20del%20factorial/CerosFactorial.java) |
+| 139 | Numeros cubifinitos | [`NumerosCubifinitos.java`](001-100/139.Numeros%20cubifinitos/NumerosCubifinitos.java) |
 
 </details>
 
