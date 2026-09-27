@@ -34,14 +34,31 @@ jobs:
             if [ ! -d "001-100/$nombre" ]; then
               mkdir -p "001-100/$nombre"
               cp "$carpeta"*.java "001-100/$nombre/"
+              num="${nombre%%.*}"
+              titulo="${nombre#*.}"
+              archivo="$(ls "$carpeta" | grep '\.java$' | head -n1)"
+
               git add "001-100/$nombre"/
-              git commit -m "#${nombre%%.*} - ${nombre#*.}"
+              git commit -m "#$num - $titulo"
+
+              # Anadir fila al README (nombre sin acentos, derivado de la carpeta)
+              fila="| $num | $titulo | \`$archivo\` |"
+              sed -i "/^## Lenguaje$/i $fila" README.md
+              git add README.md
+              git commit -m "Actualizar README con #$num"
+
               echo "Publicado: $nombre"
               publicado=true
             fi
           done
 
           if [ "$publicado" = "true" ]; then
+            # Actualizar contador de resueltos en la tabla de Progreso
+            resueltos=$(grep -cE '^\| [0-9]{3,} \|' README.md | tr -d ' ')
+            sed -i -E "s/^\| 1 \| 100-199 \| [0-9]+\/100 \|$/| 1 | 100-199 | ${resueltos}\/100 |/" README.md
+            git add README.md
+            git commit -m "Actualizar progreso en README" || true
+
             git pull --rebase origin main
             git push origin main
           else
