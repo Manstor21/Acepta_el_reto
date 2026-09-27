@@ -66,6 +66,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 133 | Prueba del nueve en base N | [`PruebaNueveBaseN.java`](001-100/133.Prueba%20del%20nueve%20en%20base%20N/PruebaNueveBaseN.java) |
 | 134 | Escalera de color | [`EscaleraColor.java`](001-100/134.Escalera%20de%20color/EscaleraColor.java) |
 | 135 | Viaje en el tiempo | [`ViajeTiempo.java`](001-100/135.Viaje%20en%20el%20tiempo/ViajeTiempo.java) |
+| 136 | Encadenando trolls | [`EncadenandoTrolls.java`](001-100/136.Encadenando%20trolls/EncadenandoTrolls.java) |
 
 </details>
 
