@@ -59,7 +59,6 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 132 | Las cartas del abuelo | `CartasAbuelo.java` |
 | 133 | Prueba del nueve en base N | `PruebaNueveBaseN.java` |
 | 134 | Escalera de color | `EscaleraColor.java` |
-
 | 135 | Viaje en el tiempo | `ViajeTiempo.java` |
 
 ## Lenguaje
