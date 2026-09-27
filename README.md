@@ -18,12 +18,12 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 
 | Volumen | Rango | Resueltos |
 |---------|-------|-----------|
-| 1 | 100-199 | 36/100 |
+| 1 | 100-199 | 37/100 |
 
 ## Problemas completados
 
 <details>
-<summary><strong>Volumen 1</strong> — problemas <code>100-199</code> · <code>(36/100)</code> resueltos — <i>clic para ver la tabla</i></summary>
+<summary><strong>Volumen 1</strong> — problemas <code>100-199</code> · <code>(37/100)</code> resueltos — <i>clic para ver la tabla</i></summary>
 
 > [!TIP]
 > Haz clic en el título para desplegar la lista de problemas.
