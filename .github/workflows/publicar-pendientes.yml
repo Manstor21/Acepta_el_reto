@@ -42,8 +42,9 @@ jobs:
               git commit -m "#$num - $titulo"
 
               # Anadir fila al README (nombre sin acentos, derivado de la carpeta)
+              # awk inserta la fila y una linea en blanco antes de "## Lenguaje"
               fila="| $num | $titulo | \`$archivo\` |"
-              sed -i "/^## Lenguaje$/i $fila" README.md
+              awk -v fila="$fila" '/^## Lenguaje$/ { print fila; print "" } { print }' README.md > README.tmp && mv README.tmp README.md
               git add README.md
               git commit -m "Actualizar README con #$num"
 
