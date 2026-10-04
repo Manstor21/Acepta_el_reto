@@ -12,12 +12,12 @@ jobs:
   publicar:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322ed4b5ddfb07d5
         with:
           ref: pendientes
           path: pendientes
 
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322ed4b5ddfb07d5
         with:
           ref: main
           path: main
