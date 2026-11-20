@@ -79,6 +79,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 146 | Numeros afortunados | [`NumerosAfortunados.java`](001-100/146.Numeros%20afortunados/NumerosAfortunados.java) |
 | 147 | Las 15 cerillas | [`Cerillas.java`](001-100/147.Las%2015%20cerillas/Cerillas.java) |
 | 148 | Nochevieja | [`Nochevieja.java`](001-100/148.Nochevieja/Nochevieja.java) |
+| 149 | San Fermines | [`SanFermines.java`](001-100/149.San%20Fermines/SanFermines.java) |
 
 </details>
 
