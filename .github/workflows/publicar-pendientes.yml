@@ -10,6 +10,11 @@ on:
         required: false
         type: boolean
         default: false
+      retardo_max:
+        description: 'Tope del retardo aleatorio en segundos (solo pruebas). El cron ignora este input y usa 14400.'
+        required: false
+        type: number
+        default: 14400
 
 permissions:
   contents: write
@@ -18,12 +23,12 @@ jobs:
   publicar:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5 (SHA fijo: la tag@v5 dejo de resolver en runs schedule)
         with:
           ref: pendientes
           path: pendientes
 
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5 (SHA fijo: la tag@v5 dejo de resolver en runs schedule)
         with:
           ref: main
           path: main
@@ -33,12 +38,16 @@ jobs:
           # El cron dispara a las 09:00 UTC. Un retardo aleatorio de 0 a 4 horas
           # reparte la publicacion entre ~09:00 y ~13:00 UTC (~10:00-15:00 hora de Espana),
           # siempre en horario normal y por debajo del timeout del job.
+          # El cron NO pasa inputs: maximo por defecto 14400. El input retardo_max solo
+          # existe para probar esta misma rama con un retardo corto desde workflow_dispatch.
+          max_retardo="${{ github.event.inputs.retardo_max }}"
+          if [ -z "$max_retardo" ]; then max_retardo=14400; fi
           if [ "${{ github.event.inputs.publicar_ahora }}" = "true" ]; then
             retardo=0
             echo "Dispatch manual sin retardo: publicando ahora"
           else
-            retardo=$(( RANDOM % 14400 ))
-            echo "Retardo aleatorio: ${retardo}s (~$(( retardo / 3600 ))h) antes de publicar"
+            retardo=$(( RANDOM % max_retardo ))
+            echo "Retardo aleatorio: ${retardo}s de un maximo de ${max_retardo}s (~$(( retardo / 3600 ))h) antes de publicar"
           fi
           sleep "$retardo"
 
