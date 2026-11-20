@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: '0 9 * * *'
   workflow_dispatch:
+    inputs:
+      publicar_ahora:
+        description: 'Sin retardo aleatorio (para validacion manual)'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -24,10 +30,16 @@ jobs:
 
       - name: Publicar un problema al dia a hora normal aleatoria
         run: |
-          # El cron dispara a las 09:00 UTC. Un retardo aleatorio de 0 a 8 horas
-          # reparte la publicacion entre ~09:00 y ~17:00 UTC (hora normal, nunca de madrugada).
-          retardo=$(( RANDOM % 28800 ))
-          echo "Retardo aleatorio: ${retardo}s (~$(( retardo / 3600 ))h) antes de publicar"
+          # El cron dispara a las 09:00 UTC. Un retardo aleatorio de 0 a 4 horas
+          # reparte la publicacion entre ~09:00 y ~13:00 UTC (~10:00-15:00 hora de Espana),
+          # siempre en horario normal y por debajo del timeout del job.
+          if [ "${{ github.event.inputs.publicar_ahora }}" = "true" ]; then
+            retardo=0
+            echo "Dispatch manual sin retardo: publicando ahora"
+          else
+            retardo=$(( RANDOM % 14400 ))
+            echo "Retardo aleatorio: ${retardo}s (~$(( retardo / 3600 ))h) antes de publicar"
+          fi
           sleep "$retardo"
 
           cd main
