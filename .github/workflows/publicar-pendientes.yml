@@ -2,7 +2,7 @@ name: Publicar pendientes
 
 on:
   schedule:
-    - cron: '12 9 * * *'
+    - cron: '0 9 * * *'
   workflow_dispatch:
 
 permissions:
@@ -22,8 +22,14 @@ jobs:
           ref: main
           path: main
 
-      - name: Mover problemas pendientes a main
+      - name: Publicar un problema al dia a hora normal aleatoria
         run: |
+          # El cron dispara a las 09:00 UTC. Un retardo aleatorio de 0 a 8 horas
+          # reparte la publicacion entre ~09:00 y ~17:00 UTC (hora normal, nunca de madrugada).
+          retardo=$(( RANDOM % 28800 ))
+          echo "Retardo aleatorio: ${retardo}s (~$(( retardo / 3600 ))h) antes de publicar"
+          sleep "$retardo"
+
           cd main
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -53,6 +59,8 @@ jobs:
 
               echo "Publicado: $nombre"
               publicado=true
+              # Solo UN problema por ejecucion: el resto queda para los proximos dias.
+              break
             fi
           done
 
