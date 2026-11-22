@@ -2,6 +2,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/*
+ * El mensaje tiene que aparecer como subsecuencia del titular:
+ * se recorre el titular en orden y se va consumiendo el mensaje.
+ * Se ignoran espacios y mayusculas en los dos textos.
+ */
 public class QuintoMilenio {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class CualEsLaSiguienteMatricula {
+    // Vocales y Ñ estan excluidas de las matriculas, por eso no estan aqui
     private static final String LETRAS = "BCDFGHJKLMNPQRSTVWXYZ";
 
     public static void main(String[] args) {
@@ -24,6 +25,7 @@ public class CualEsLaSiguienteMatricula {
                         letrasMatricula[i] = LETRAS.charAt(posicion);
                         break;
                     }
+                    // Z vuelve a B y el incremento pasa a la letra anterior
                     letrasMatricula[i] = LETRAS.charAt(0);
                     i--;
                 }

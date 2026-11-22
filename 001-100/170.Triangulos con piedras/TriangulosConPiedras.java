@@ -11,6 +11,7 @@ public class TriangulosConPiedras {
                 break;
             }
 
+            // La raiz invierte la formula triangular; los bucles corrigen el truncamiento
             long lado = (long) ((Math.sqrt(1 + 8.0 * piedras) - 1) / 2);
 
             while ((lado + 1) * (lado + 2) / 2 <= piedras) {

@@ -2,6 +2,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/*
+ * Se rellena desde la esquina inferior izquierda hacia la superior derecha:
+ * cada casilla suma los caminos de abajo y de la izquierda.
+ * Una X corta el paso y deja esa casilla a 0.
+ */
 public class LasTorresPerezosas {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -27,6 +32,7 @@ public class LasTorresPerezosas {
                 for (int j = 0; j < n; j++) {
                     if (tablero[i].charAt(j) == 'X') {
                         formas[i][j] = 0;
+                    // La casilla de salida cuenta como un camino de longitud cero
                     } else if (i == n - 1 && j == 0) {
                         formas[i][j] = 1;
                     } else {

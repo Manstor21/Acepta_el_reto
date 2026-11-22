@@ -6,6 +6,7 @@ public class PerimetroDeUnRectangulo {
         while (sc.hasNextLong()) {
             long x = sc.nextLong();
             long y = sc.nextLong();
+            // Cualquier coordenada negativa marca el final de la entrada
             if (x < 0 || y < 0) {
                 break;
             }

@@ -13,6 +13,7 @@ public class Ascensor {
             if (primero < 0) {
                 break;
             }
+            // -1 cierra la lista de parejas de esta linea
             int actual = primero;
             long recorrido = 0;
             int i = 1;
@@ -22,6 +23,7 @@ public class Ascensor {
                     break;
                 }
                 int destino = Integer.parseInt(partes[i++]);
+                // Primero va a recoger a quien llama y despues al destino
                 recorrido += Math.abs(origen - actual) + Math.abs(destino - origen);
                 actual = destino;
             }

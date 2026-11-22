@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+/*
+ * Los apellidos llegan agrupados y con mayusculas erraticas,
+ * basta con mirar rachas consecutivas ignorando el caso.
+ * "====" separa casos, no es un participante.
+ */
 public class CarreraPopular {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

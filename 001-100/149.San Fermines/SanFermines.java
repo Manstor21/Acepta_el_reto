@@ -10,6 +10,7 @@ public class SanFermines {
             }
             String[] partes = linea.split("\\s+");
             int n = Integer.parseInt(partes[0]);
+            // El corredor solo necesita igualar al toro mas rapido
             long velMaxima = 0;
             for (int i = 1; i <= n; i++) {
                 long velocidad = Long.parseLong(partes[i]);

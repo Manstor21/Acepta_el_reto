@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+/*
+ * Solo puntua quien tenia el saque; al perderlo solo cambia de manos.
+ * Un set se cierra a 9 puntos con dos de ventaja y su ganador saca el siguiente.
+ * La F corta el partido: lo jugado hasta ahi puede ser un marcador parcial.
+ */
 public class PartidoDeSquash {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -24,6 +29,7 @@ public class PartidoDeSquash {
             for (int i = 0; i < linea.length(); i++) {
                 char ganador = linea.charAt(i);
 
+                // Al llegar a tres sets no se juega el siguiente punto
                 if (ganador == 'F' || setsA == 3 || setsB == 3) {
                     break;
                 }

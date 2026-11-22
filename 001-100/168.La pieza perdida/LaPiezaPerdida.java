@@ -16,6 +16,7 @@ public class LaPiezaPerdida {
                 suma += sc.nextInt();
             }
 
+            // Las piezas estan numeradas del 1 al n y solo falta una
             long esperada = (long) piezas * (piezas + 1) / 2;
             System.out.println(esperada - suma);
         }

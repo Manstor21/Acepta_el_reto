@@ -10,6 +10,7 @@ public class MolinosDeViento {
                 break;
             }
 
+            // Suma acumulada para responder cada consulta en un paso; indices desde 1
             long[] acumulada = new long[n + 1];
             for (int i = 1; i <= n; i++) {
                 acumulada[i] = acumulada[i - 1] + sc.nextLong();

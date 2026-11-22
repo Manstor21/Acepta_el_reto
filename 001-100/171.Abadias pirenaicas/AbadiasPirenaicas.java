@@ -16,6 +16,7 @@ public class AbadiasPirenaicas {
                 alturas[i] = sc.nextInt();
             }
 
+            // De este a oeste: asi maximaAlEste ya tiene las cimas vistas
             int maximaAlEste = -1;
             int abadias = 0;
 

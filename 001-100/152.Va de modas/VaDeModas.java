@@ -17,6 +17,7 @@ public class VaDeModas {
                 int valor = sc.nextInt();
                 int frecuencia = frecuencias.getOrDefault(valor, 0) + 1;
                 frecuencias.put(valor, frecuencia);
+                // El enunciado garantiza una sola moda, no hay desempates
                 if (frecuencia > maxFrecuencia) {
                     maxFrecuencia = frecuencia;
                     moda = valor;

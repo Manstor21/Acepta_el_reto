@@ -9,6 +9,7 @@ public class PersistenciaMultiplicativaDeLosNumeros {
             long numero = sc.nextLong();
             int pasos = 0;
 
+            // Se multiplican los digitos hasta una sola cifra; cada vuelta es un paso
             while (numero >= 10) {
                 long producto = 1;
                 long x = numero;

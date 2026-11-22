@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+/*
+ * Se buscan tramos consecutivos de anos con la misma propiedad:
+ * todos con digitos repetidos o todos sin repetir.
+ * Se extiende el tramo a ambos lados mientras la propiedad no cambie.
+ */
 public class Ano2013 {
     private static final int MINIMO = 1000;
     private static final int MAXIMO = 1000000;

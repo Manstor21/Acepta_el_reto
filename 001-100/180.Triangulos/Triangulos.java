@@ -11,6 +11,7 @@ public class Triangulos {
             lados[0] = sc.nextLong();
             lados[1] = sc.nextLong();
             lados[2] = sc.nextLong();
+            // El lado mayor queda al final: basta compararlo con los otros dos
             Arrays.sort(lados);
 
             if (lados[0] + lados[1] <= lados[2]) {

@@ -12,6 +12,7 @@ public class Zapping {
                 break;
             }
 
+            // Los 99 canales forman un circulo: mejor quedarse con la distancia corta
             int distancia = Math.abs(origen - destino);
             System.out.println(Math.min(distancia, 99 - distancia));
         }

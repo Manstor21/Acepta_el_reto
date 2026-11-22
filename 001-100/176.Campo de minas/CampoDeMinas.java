@@ -36,6 +36,7 @@ public class CampoDeMinas {
                             }
                         }
                     }
+                    // Seis minas alrededor hacen insegura la casilla
                     if (minas >= 6) {
                         total++;
                     }
