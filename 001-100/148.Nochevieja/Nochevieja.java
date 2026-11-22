@@ -13,6 +13,7 @@ public class Nochevieja {
             if (horas == 0 && minutos == 0) {
                 break;
             }
+            // 00:00 del dia siguiente son 1440 minutos desde la medianoche anterior
             System.out.println(24 * 60 - (horas * 60 + minutos));
         }
         sc.close();

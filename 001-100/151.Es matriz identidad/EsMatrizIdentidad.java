@@ -8,6 +8,7 @@ public class EsMatrizIdentidad {
             if (n == 0) {
                 break;
             }
+            // Hay que leer la matriz entera aunque ya aparezca un valor malo
             boolean identidad = true;
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
