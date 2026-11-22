@@ -81,6 +81,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 148 | Nochevieja | [`Nochevieja.java`](001-100/148.Nochevieja/Nochevieja.java) |
 | 149 | San Fermines | [`SanFermines.java`](001-100/149.San%20Fermines/SanFermines.java) |
 | 150 | A dibujar hexagonos | [`ADibujarHexagonos.java`](001-100/150.A%20dibujar%20hexagonos/ADibujarHexagonos.java) |
+| 151 | Es matriz identidad | [`EsMatrizIdentidad.java`](001-100/151.Es%20matriz%20identidad/EsMatrizIdentidad.java) |
 
 </details>
 
