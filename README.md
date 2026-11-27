@@ -86,6 +86,7 @@ Cada problema se organiza en su propia carpeta dentro del volumen que le corresp
 | 153 | Reloj a traves del espejo | [`RelojATravesDelEspejo.java`](001-100/153.Reloj%20a%20traves%20del%20espejo/RelojATravesDelEspejo.java) |
 | 154 | Cual es la siguiente matricula | [`CualEsLaSiguienteMatricula.java`](001-100/154.Cual%20es%20la%20siguiente%20matricula/CualEsLaSiguienteMatricula.java) |
 | 155 | Perimetro de un rectangulo | [`PerimetroDeUnRectangulo.java`](001-100/155.Perimetro%20de%20un%20rectangulo/PerimetroDeUnRectangulo.java) |
+| 156 | Ascensor | [`Ascensor.java`](001-100/156.Ascensor/Ascensor.java) |
 
 </details>
 
